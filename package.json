@@ -1,0 +1,38 @@
+{
+  "name": "mern-stack-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix ./client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "Bidyut",
+  "license": "TPI",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "colors": "^1.4.0",
+    "concurrently": "^8.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-formidable": "^1.2.0",
+    "jquery-ui-dist": "^1.13.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.1.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.22",
+    "react": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "react-router-dom": "^6.11.1",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
+    "slugify": "^1.6.6",
+    "toastify": "^2.0.1",
+    "uuid": "^9.0.0"
+  }
+}
