@@ -16,7 +16,7 @@ const app = express();
 //database config
 connectDB();
 
-
+    
 //middelwares
 app.use(cors())
 app.use(express.json())
