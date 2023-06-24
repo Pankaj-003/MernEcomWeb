@@ -806,7 +806,7 @@ const Home = () => {
                     {/* <h1 className="text-center">All Products</h1> */}
                     <div className="d-flex flex-wrap ">
                         {products?.map((p) => (
-                            <div className="card vvvv m-2 " style={{ width: "300px" }} key={p._id}>
+                            <div className="card vvvv m-2 " style={{  width: "300px",height:"340px" }} key={p._id}>
                                 <img
                                     src={`/api/v1/product/product-photo/${p._id}`}
                                     className="card-img-top"
@@ -819,38 +819,28 @@ const Home = () => {
                                         {p.description.substring(0, 30)}...
                                     </p>
                                     <p className="box-price-main" style={{margin: "0px",padding:"0px"}}> $ {p.price}</p>
-                                 <div className="hover-main-btn">
+                                    <div className="hover-main-btn cart-btnadd">
                                     <button
-                                        className="all-btn-style ms-1"
+                                        className="moredetails addtocardmoredetails ms-1"
                                         onClick={() => navigate(`/product/${p.slug}`)}
                                     >
-                                        More Details
-                                    </button>
-                                    <button className="all-btn-style btn-danger ms-1"
+                                       <i class="fas addicon fa-info-circle"></i>
+
+                                    </button> <br />
+                                    <button className="addtocard addtocardmoredetails btn-danger ms-1"
                                         onClick={() => {
                                             setCart([...cart, p])
                                             toast.success('Item Added to Cart')
                                         }}>
-                                        ADD TO CART
+                                        <i class="fas addicon fa-shopping-bag"></i>
+
                                     </button>
                                     </div>
                                 </div>
                             </div>
                         ))}
                     </div>
-                    <div className="m-2 p-3">
-                        {products && products.length < total && (
-                            <button
-                                className="all-btn-style loading-btn btn-warning"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    setPage(page + 1);
-                                }}
-                            >
-                                {loading ? "Loading ..." : "Loadmore"}
-                            </button>
-                        )}
-                    </div>
+         
                 </div>
                 {/* ............... */}
                                         </div>
@@ -862,7 +852,7 @@ const Home = () => {
                     {/* <h1 className="text-center">All Products</h1> */}
                     <div className="d-flex flex-wrap ">
                         {products?.map((p) => (
-                            <div className="card vvvv m-2 " style={{ width: "300px" }} key={p._id}>
+                            <div className="card vvvv m-2 " style={{  width: "300px",height:"340px" }} key={p._id}>
                                 <img
                                     src={`/api/v1/product/product-photo/${p._id}`}
                                     className="card-img-top"
@@ -875,38 +865,28 @@ const Home = () => {
                                         {p.description.substring(0, 30)}...
                                     </p>
                                     <p className="box-price-main" style={{margin: "0px",padding:"0px"}}> $ {p.price}</p>
-                                 <div className="hover-main-btn">
+                                    <div className="hover-main-btn cart-btnadd">
                                     <button
-                                        className="all-btn-style ms-1"
+                                        className="moredetails addtocardmoredetails ms-1"
                                         onClick={() => navigate(`/product/${p.slug}`)}
                                     >
-                                        More Details
-                                    </button>
-                                    <button className="all-btn-style btn-danger ms-1"
+                                       <i class="fas addicon fa-info-circle"></i>
+
+                                    </button> <br />
+                                    <button className="addtocard addtocardmoredetails btn-danger ms-1"
                                         onClick={() => {
                                             setCart([...cart, p])
                                             toast.success('Item Added to Cart')
                                         }}>
-                                        ADD TO CART
+                                        <i class="fas addicon fa-shopping-bag"></i>
+
                                     </button>
                                     </div>
                                 </div>
                             </div>
                         ))}
                     </div>
-                    <div className="m-2 p-3">
-                        {products && products.length < total && (
-                            <button
-                                className="all-btn-style loading-btn btn-warning"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    setPage(page + 1);
-                                }}
-                            >
-                                {loading ? "Loading ..." : "Loadmore"}
-                            </button>
-                        )}
-                    </div>
+         
                 </div>
                 {/* ............... */}
                                         </div>
@@ -914,11 +894,11 @@ const Home = () => {
                                         <div className="tab-pane fade" id="pills-popular" role="tabpanel"
                                             aria-labelledby="pills-popular-tab">
                             {/* ......... */}
-                            <div className="col-md-9 offset-1 All_Products_main_box " >
+                            <div className="col-md-9 offset-1 All_Products_main_box All_Products_main_box_short" >
                     {/* <h1 className="text-center">All Products</h1> */}
                     <div className="d-flex flex-wrap ">
                         {products?.map((p) => (
-                            <div className="card vvvv m-2 " style={{ width: "300px" }} key={p._id}>
+                            <div className="card vvvv m-2 " style={{  width: "300px",height:"340px" }} key={p._id}>
                                 <img
                                     src={`/api/v1/product/product-photo/${p._id}`}
                                     className="card-img-top"
@@ -931,38 +911,28 @@ const Home = () => {
                                         {p.description.substring(0, 30)}...
                                     </p>
                                     <p className="box-price-main" style={{margin: "0px",padding:"0px"}}> $ {p.price}</p>
-                                 <div className="hover-main-btn">
+                                    <div className="hover-main-btn cart-btnadd">
                                     <button
-                                        className="all-btn-style ms-1"
+                                        className="moredetails addtocardmoredetails ms-1"
                                         onClick={() => navigate(`/product/${p.slug}`)}
                                     >
-                                        More Details
-                                    </button>
-                                    <button className="all-btn-style btn-danger ms-1"
+                                       <i class="fas addicon fa-info-circle"></i>
+
+                                    </button> <br />
+                                    <button className="addtocard addtocardmoredetails btn-danger ms-1"
                                         onClick={() => {
                                             setCart([...cart, p])
                                             toast.success('Item Added to Cart')
                                         }}>
-                                        ADD TO CART
+                                        <i class="fas addicon fa-shopping-bag"></i>
+
                                     </button>
                                     </div>
                                 </div>
                             </div>
                         ))}
                     </div>
-                    <div className="m-2 p-3">
-                        {products && products.length < total && (
-                            <button
-                                className="all-btn-style loading-btn btn-warning"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    setPage(page + 1);
-                                }}
-                            >
-                                {loading ? "Loading ..." : "Loadmore"}
-                            </button>
-                        )}
-                    </div>
+         
                 </div>
                 {/* ............... */}
                                         </div>
@@ -970,11 +940,11 @@ const Home = () => {
                                         <div className="tab-pane fade" id="pills-featured" role="tabpanel"
                                             aria-labelledby="pills-featured-tab">
                             {/* ......... */}
-                            <div className="col-md-9 offset-1 All_Products_main_box" >
+                            <div className="col-md-9 offset-1 All_Products_main_box All_Products_main_box_short" >
                     {/* <h1 className="text-center">All Products</h1> */}
                     <div className="d-flex flex-wrap ">
                         {products?.map((p) => (
-                            <div className="card vvvv m-2 " style={{ width: "300px" }} key={p._id}>
+                            <div className="card vvvv m-2 " style={{  width: "300px",height:"340px" }} key={p._id}>
                                 <img
                                     src={`/api/v1/product/product-photo/${p._id}`}
                                     className="card-img-top"
@@ -987,38 +957,28 @@ const Home = () => {
                                         {p.description.substring(0, 30)}...
                                     </p>
                                     <p className="box-price-main" style={{margin: "0px",padding:"0px"}}> $ {p.price}</p>
-                                 <div className="hover-main-btn">
+                                    <div className="hover-main-btn cart-btnadd">
                                     <button
-                                        className="all-btn-style ms-1"
+                                        className="moredetails addtocardmoredetails ms-1"
                                         onClick={() => navigate(`/product/${p.slug}`)}
                                     >
-                                        More Details
-                                    </button>
-                                    <button className="all-btn-style btn-danger ms-1"
+                                       <i class="fas addicon fa-info-circle"></i>
+
+                                    </button> <br />
+                                    <button className="addtocard addtocardmoredetails btn-danger ms-1"
                                         onClick={() => {
                                             setCart([...cart, p])
                                             toast.success('Item Added to Cart')
                                         }}>
-                                        ADD TO CART
+                                        <i class="fas addicon fa-shopping-bag"></i>
+
                                     </button>
                                     </div>
                                 </div>
                             </div>
                         ))}
                     </div>
-                    <div className="m-2 p-3">
-                        {products && products.length < total && (
-                            <button
-                                className="all-btn-style loading-btn btn-warning"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    setPage(page + 1);
-                                }}
-                            >
-                                {loading ? "Loading ..." : "Loadmore"}
-                            </button>
-                        )}
-                    </div>
+         
                 </div>
                 {/* ............... */}
                                         </div>
@@ -1107,19 +1067,21 @@ const Home = () => {
                                         {p.description.substring(0, 30)}...
                                     </p>
                                     <p className="box-price-main" style={{margin: "0px",padding:"0px"}}> $ {p.price}</p>
-                                 <div className="hover-main-btn">
+                                    <div className="hover-main-btn cart-btnadd">
                                     <button
-                                        className="all-btn-style ms-1"
+                                        className="moredetails addtocardmoredetails ms-1"
                                         onClick={() => navigate(`/product/${p.slug}`)}
                                     >
-                                        More Details
-                                    </button>
-                                    <button className="all-btn-style btn-danger ms-1"
+                                       <i class="fas addicon fa-info-circle"></i>
+
+                                    </button> <br />
+                                    <button className="addtocard addtocardmoredetails btn-danger ms-1"
                                         onClick={() => {
                                             setCart([...cart, p])
                                             toast.success('Item Added to Cart')
                                         }}>
-                                        ADD TO CART
+                                        <i class="fas addicon fa-shopping-bag"></i>
+
                                     </button>
                                     </div>
                                 </div>
@@ -1183,19 +1145,21 @@ const Home = () => {
                                         {p.description.substring(0, 30)}...
                                     </p>
                                     <p className="box-price-main" style={{margin: "0px",padding:"0px"}}> $ {p.price}</p>
-                                 <div className="hover-main-btn">
+                                    <div className="hover-main-btn cart-btnadd">
                                     <button
-                                        className="all-btn-style ms-1"
+                                        className="moredetails addtocardmoredetails ms-1"
                                         onClick={() => navigate(`/product/${p.slug}`)}
                                     >
-                                        More Details
-                                    </button>
-                                    <button className="all-btn-style btn-danger ms-1"
+                                       <i class="fas addicon fa-info-circle"></i>
+
+                                    </button> <br />
+                                    <button className="addtocard addtocardmoredetails btn-danger ms-1"
                                         onClick={() => {
                                             setCart([...cart, p])
                                             toast.success('Item Added to Cart')
                                         }}>
-                                        ADD TO CART
+                                        <i class="fas addicon fa-shopping-bag"></i>
+
                                     </button>
                                     </div>
                                 </div>
@@ -1240,7 +1204,7 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                
+                {/* ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, */}
                     <div className="product_wrap_part wrap_three">
                         <div className="row">
                             <div className="col-lg-12">
@@ -1280,7 +1244,7 @@ const Home = () => {
                                         {p.description.substring(0, 30)}...
                                     </p>
                                     <p className="box-price-main" style={{margin: "0px",padding:"0px"}}> $ {p.price}</p>
-                                 <div className="hover-main-btn">
+                                 {/* <div className="hover-main-btn">
                                     <button
                                         className="all-btn-style ms-1"
                                         onClick={() => navigate(`/product/${p.slug}`)}
@@ -1294,12 +1258,29 @@ const Home = () => {
                                         }}>
                                         ADD TO CART
                                     </button>
+                                    </div> */}
+                                                                        <div className="hover-main-btn cart-btnadd">
+                                    <button
+                                        className="moredetails addtocardmoredetails ms-1"
+                                        onClick={() => navigate(`/product/${p.slug}`)}
+                                    >
+                                       <i class="fas addicon fa-info-circle"></i>
+
+                                    </button> <br />
+                                    <button className="addtocard addtocardmoredetails btn-danger ms-1"
+                                        onClick={() => {
+                                            setCart([...cart, p])
+                                            toast.success('Item Added to Cart')
+                                        }}>
+                                        <i class="fas addicon fa-shopping-bag"></i>
+
+                                    </button>
                                     </div>
                                 </div>
                             </div>
                         ))}
                     </div>
-                    <div className="m-2 p-3">
+                    <div className="">
                         {products && products.length < total && (
                             <button
                                 className="all-btn-style loading-btn btn-warning"

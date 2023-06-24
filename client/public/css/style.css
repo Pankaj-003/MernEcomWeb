@@ -2443,7 +2443,7 @@ font-size: 18px;
   margin-top: 10px;
 }
 .All_Products_main_box{
-  /* border: 1px solid yellow; */
+  border: 1px solid yellow;
   margin: 0;
   /* width: 100%; */
   /* display: flex; */
@@ -2471,9 +2471,10 @@ font-size: 18px;
   background-color: #336699;
 }
 .vvvv{
-  /* border: 1px solid gray; */
-  height: 300px;
+  border: 1px solid rgb(202, 9, 9);
+  height: 340px;
   text-align: center;
+  position: relative;
   
 }
 
@@ -2491,9 +2492,21 @@ font-size: 18px;
   position: absolute;
   /* margin-bottom: 20px; */
   top: 230px;
-  display: none;
-}
 
+}
+.cart-btnadd{
+  
+  position: absolute;
+
+  top: 0;
+  right:  0;
+  display: none;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+.addtocard{
+  padding-top: 5px;
+}
 
 .vvvv:hover .hover-main-btn {
   display: block;
@@ -2535,12 +2548,7 @@ font-size: 18px;
   margin: 0 auto;
   width: 1300px;
 }
-.admin_flex_manin_box_cat{
-  /* border: 1px solid yellow; */
-  /* display: flex;
-  justify-content: center; */
-  /* width: 1300px; */
-}
+
 .admin-create-product{
   /* border: 1px solid green; */
 /* width: 1320px; */
@@ -2586,13 +2594,7 @@ width: 1320px;
 }
 /* ====
  */
- .nav-item{
-  /* border: 1px solid red; */
- }
- #navbarTogglerDemo01 ul li{
-  /* border: 1px solid black; */
-  /* text-decoration: dotted; */
- }
+
 .nav-link{
   /* border: 1px solid red; */
   text-decoration: none;
@@ -2634,4 +2636,15 @@ body {
 .more-details-product-deatils{
   /* border: 1px solid grey; */
   padding-left: 25px;
+}
+
+
+.addtocardmoredetails{
+  border: none;
+  background-color:  transparent;
+ 
+}
+.addicon{
+  font-size: 30px;
+  color: #336699;
 }
