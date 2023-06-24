@@ -2443,7 +2443,7 @@ font-size: 18px;
   margin-top: 10px;
 }
 .All_Products_main_box{
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
   margin: 0;
   /* width: 100%; */
   /* display: flex; */
@@ -2471,7 +2471,7 @@ font-size: 18px;
   background-color: #336699;
 }
 .vvvv{
-  border: 1px solid rgb(202, 9, 9);
+  /* border: 1px solid rgb(202, 9, 9); */
   height: 340px;
   text-align: center;
   position: relative;
