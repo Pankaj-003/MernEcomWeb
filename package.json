@@ -11,7 +11,7 @@
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
-  "author": "Bidyut",
+  "author": "pankaj",
   "license": "TPI",
   "dependencies": {
     "bcrypt": "^5.1.0",
