@@ -131,3 +131,29 @@ height: 140px;
 
 }
 /* ================ */
+/* contact page css */
+.contact-page-main{
+  /* border: 1px solid red; */
+  padding: 30px 0;
+  padding-left: 10px;
+}
+.contact-page-heading{
+  /* border: 1px solid gold; */
+}
+.contact-page-main-heading{
+  text-align: center;
+}
+.contact-info-main{
+  /* border: 1px solid red; */
+  text-align: center;
+}
+.contact-form-main-from-box{
+  /* border: 1px solid rebeccapurple; */
+  /* text-align: center; */
+  margin-left: auto 0;
+  /* padding: 0 300px; */
+  padding-top: 15px;
+}
+.contact-form-title{
+  text-align: center;
+}

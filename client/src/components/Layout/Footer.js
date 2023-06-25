@@ -1,20 +1,20 @@
 // import React from 'react'
-// import { Link } from 'react-router-dom'
 
 // const Footer = () => {
-//     return (
-//         <div classNameName='footer'><h1 classNameName='text-center'>All Rights Reserved &copy; Bidyut</h1>
-//             <p classNameName='text-center mt-3'>
-//                 <Link to="/about">About</Link>
-//                 <Link to="/Contact">Contact us</Link>
-//                 <Link to="/Policy">Privacy Policy</Link>
-//             </p>
-//         </div>
-//     );
-// };
-
-// export default Footer;
+    //     return (
+        //         <div classNameName='footer'><h1 classNameName='text-center'>All Rights Reserved &copy; Bidyut</h1>
+        //             <p classNameName='text-center mt-3'>
+        //                 <Link to="/about">About</Link>
+        //                 <Link to="/Contact">Contact us</Link>
+        //                 <Link to="/Policy">Privacy Policy</Link>
+        //             </p>
+        //         </div>
+        //     );
+        // };
+        
+        // export default Footer;
 import React from 'react'
+import { Link } from 'react-router-dom'
 // import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
@@ -82,7 +82,8 @@ const Footer = () => {
                                 <li><a href="/">About Us </a></li>
                                 <li><a href="/">Team Member</a></li>
                                 <li><a href="/">Career</a></li>
-                                <li><a href="/">Contact Us</a></li>
+                                <Link to="/Contact">Contact us</Link>
+                                {/* <li><a href="/">Contact Us</a></li> */}
                                 <li><a href="/">Affilate</a></li>
                                 <li><a href="/">Order History</a></li>
                             </ul>

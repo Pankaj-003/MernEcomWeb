@@ -2451,6 +2451,15 @@ font-size: 18px;
   align-items: center;
   padding: 0;
 }
+.LoadMainBtn{
+  border: none;
+  /* border: transparent; */
+  background-color: transparent;
+  font-weight: bolder;
+}
+.LoadMainBtn:hover{
+  color: #336699;
+}
 .pro_all_box{
   /* border: 1px solid rgb(12, 214, 46); */
   display: flex;

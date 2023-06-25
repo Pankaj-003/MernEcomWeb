@@ -803,7 +803,7 @@ const Home = () => {
                                             aria-labelledby="pills-arrivals-tab">
                             {/* ......... */}
                             <div className="col-md-9 offset-1 All_Products_main_box All_Products_main_box_short" >
-                    {/* <h1 className="text-center">All Products</h1> */}
+
                     <div className="d-flex flex-wrap ">
                         {products?.map((p) => (
                             <div className="card vvvv m-2 " style={{  width: "300px",height:"340px" }} key={p._id}>
@@ -814,7 +814,7 @@ const Home = () => {
                                     style={{ width: "200px" }}
                                 />
                                 <div className="card-body">
-                                    <h5 className="" style={{margin: "0px",padding:"0px"}}>{p.name}</h5>
+                                    <h5 className="" style={{margin: "0px",padding:"0px"}}>{p.name} </h5>
                                     <p className="" style={{margin: "0px",padding:"0px"}}>
                                         {p.description.substring(0, 30)}...
                                     </p>
@@ -1033,6 +1033,17 @@ const Home = () => {
                                 <div className="wrap_common_head d-flex justify-content-between">
                                     <h6>Clothing & Apparel</h6>
                                     {/* <a href="/">More Products <i className="fas fa-long-arrow-alt-right"></i></a> */}
+                                    {products && products.length < total && (
+                            <button
+                                className="LoadMainBtn"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    setPage(page + 1);
+                                }}
+                            >
+                                {loading ? "Loading ..." : "Loadmore"}
+                            </button>
+                        )}
                                 </div>
                             </div>
                         </div>
@@ -1088,10 +1099,21 @@ const Home = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="m-2 p-3">
-                        {products && products.length < total && (
+
+                </div>
+                {/* ............... */}
+                        </div>
+                    </div>
+             
+                    <div className="product_wrap_part wrap_two">
+                    <div className="row">
+                            <div className="col-lg-12">
+                                <div className="wrap_common_head d-flex justify-content-between">
+                                    <h6>Clothing & Apparel</h6>
+                                    {/* <a href="/">More Products <i className="fas fa-long-arrow-alt-right"></i></a> */}
+                                    {products && products.length < total && (
                             <button
-                                className="all-btn-style loading-btn btn-warning"
+                                className="LoadMainBtn"
                                 onClick={(e) => {
                                     e.preventDefault();
                                     setPage(page + 1);
@@ -1100,18 +1122,6 @@ const Home = () => {
                                 {loading ? "Loading ..." : "Loadmore"}
                             </button>
                         )}
-                    </div>
-                </div>
-                {/* ............... */}
-                        </div>
-                    </div>
-             
-                    <div className="product_wrap_part wrap_two">
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <div className="wrap_common_head d-flex justify-content-between">
-                                    <h6>Consumer Electric</h6>
-                                    {/* <a href="/">More Products <i className="fas fa-long-arrow-alt-right"></i></a> */}
                                 </div>
                             </div>
                         </div>
@@ -1166,19 +1176,7 @@ const Home = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="m-2 p-3">
-                        {products && products.length < total && (
-                            <button
-                                className="all-btn-style loading-btn btn-warning"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    setPage(page + 1);
-                                }}
-                            >
-                                {loading ? "Loading ..." : "Loadmore"}
-                            </button>
-                        )}
-                    </div>
+ 
                 </div>
                 {/* ............... */}
                         </div>
@@ -1206,11 +1204,22 @@ const Home = () => {
                     </div>
                 {/* ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, */}
                     <div className="product_wrap_part wrap_three">
-                        <div className="row">
+                    <div className="row">
                             <div className="col-lg-12">
                                 <div className="wrap_common_head d-flex justify-content-between">
-                                    <h6>Home Garden & Kitchen</h6>
+                                    <h6>Clothing & Apparel</h6>
                                     {/* <a href="/">More Products <i className="fas fa-long-arrow-alt-right"></i></a> */}
+                                    {products && products.length < total && (
+                            <button
+                                className="LoadMainBtn"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    setPage(page + 1);
+                                }}
+                            >
+                                {loading ? "Loading ..." : "Loadmore"}
+                            </button>
+                        )}
                                 </div>
                             </div>
                         </div>
@@ -1244,21 +1253,7 @@ const Home = () => {
                                         {p.description.substring(0, 30)}...
                                     </p>
                                     <p className="box-price-main" style={{margin: "0px",padding:"0px"}}> $ {p.price}</p>
-                                 {/* <div className="hover-main-btn">
-                                    <button
-                                        className="all-btn-style ms-1"
-                                        onClick={() => navigate(`/product/${p.slug}`)}
-                                    >
-                                        More Details
-                                    </button>
-                                    <button className="all-btn-style btn-danger ms-1"
-                                        onClick={() => {
-                                            setCart([...cart, p])
-                                            toast.success('Item Added to Cart')
-                                        }}>
-                                        ADD TO CART
-                                    </button>
-                                    </div> */}
+            
                                                                         <div className="hover-main-btn cart-btnadd">
                                     <button
                                         className="moredetails addtocardmoredetails ms-1"
@@ -1280,7 +1275,7 @@ const Home = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="">
+                    {/* <div className="">
                         {products && products.length < total && (
                             <button
                                 className="all-btn-style loading-btn btn-warning"
@@ -1292,7 +1287,7 @@ const Home = () => {
                                 {loading ? "Loading ..." : "Loadmore"}
                             </button>
                         )}
-                    </div>
+                    </div> */}
                 </div>
                 {/* ............... */}
                         </div>
