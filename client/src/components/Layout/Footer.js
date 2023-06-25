@@ -79,11 +79,11 @@ const Footer = () => {
                         <div className="footer_top_menu">
                             <h2>Company</h2>
                             <ul>
-                                <li><a href="/">About Us </a></li>
-                                <li><a href="/">Team Member</a></li>
+                                <li><a href="/About">About Us </a></li>
+                                <li><a href="/About">Team Member</a></li>
                                 <li><a href="/">Career</a></li>
-                                <Link to="/Contact">Contact us</Link>
-                                {/* <li><a href="/">Contact Us</a></li> */}
+                                {/* <Link to="/Contact">Contact us</Link> */}
+                                <li><a href="/Contact">Contact us</a></li>
                                 <li><a href="/">Affilate</a></li>
                                 <li><a href="/">Order History</a></li>
                             </ul>
