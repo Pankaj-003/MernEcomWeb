@@ -1,18 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "./../components/Layout/Layout";
 import { useCart } from "../context/cart";
 import { useAuth } from "../context/auth";
 import { useNavigate } from "react-router-dom";
+import DropIn from 'braintree-web-drop-in-react';
+import axios from "axios";
 
 const CartPage = () => {
   const [auth] = useAuth();
   const [cart, setCart] = useCart();
+  const [clientToken, setClientToken] = useState("")
+  const [instance, setInstance] = useState("")
+  const [loading, setLoading] = useState(false)
   const navigate = useNavigate();
 
+
   // Total price calculation
-// Total item count calculation
- // Total price calculation
- const totalPrice = () => {
+  // Total item count calculation
+  // Total price calculation
+  const totalPrice = () => {
     try {
       let total = 0;
       cart?.forEach((item) => {
@@ -59,6 +65,21 @@ const CartPage = () => {
     }
   };
 
+  //Get payment gateway token
+  const getToken = async () => {
+    try {
+      const { data } = await axios.get('/api/v1/product/braintree/token')
+      setClientToken(data?.clientToken)
+    } catch (error) {
+      console.log(error)
+    }
+  };
+  // useEffect(() => {
+  //   getToken();
+  // }, [auth?.token])
+
+  //handle payments
+  const handlePayment = () => { };
   return (
     <>
       <Layout>
@@ -70,9 +91,8 @@ const CartPage = () => {
               </h1>
               <h4 className="text-center">
                 {cart?.length
-                  ? `You Have ${cart.length} items in your cart ${
-                      auth?.token ? "" : "please login to checkout"
-                    }`
+                  ? `You Have ${cart.length} items in your cart ${auth?.token ? "" : "please login to checkout"
+                  }`
                   : " Your Cart Is Empty"}
               </h4>
             </div>
@@ -141,10 +161,25 @@ const CartPage = () => {
                       Please Login to checkout
                     </button>
                   )}
-                  {/* <br />
-                  <button className="all-btn-style">Order</button> */}
                 </div>
               )}
+              <div className="mt-2">
+                <DropIn
+                  options={{
+                    authorization: clientToken,
+                    paypal: {
+                      flow: 'vault'
+                    }
+                  }}
+                  onInstance={instance => setInstance(instance)}
+                />
+                <button
+                  className="all-btn-style"
+                  onClick={handlePayment}
+                >
+                  make P
+                </button>
+              </div>
             </div>
           </div>
         </div>
